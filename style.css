@@ -666,3 +666,26 @@ body {
     opacity: 1;
   }
 }
+# 대중교통 안내를 위해 추가
+.transport-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.transport-row > b {
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.transport-row > span {
+  flex: 1;
+}
+
+.bus-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bus-info > span {
+  line-height: 1.6;
+}
