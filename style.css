@@ -468,24 +468,6 @@ body {
   color: #1a2321;
   margin-bottom: 8px;
 }
-.transport-info {
-  border-top: 1px solid #e8e5dd;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-size: 0.85rem;
-  color: #4a4740;
-}
-.transport-info b {
-  color: #1a2321;
-  display: inline-block;
-  width: 50px;
-}
-.transport-indent {
-  display: inline-block;
-  padding-left: 54px;
-}
 .map-buttons {
   display: flex;
   width: 100%;
@@ -511,6 +493,59 @@ body {
 }
 .map-btn.tmap {
   background-color: #222222;
+}
+.transport-info {
+  width: 100%;
+  border-top: 1px solid #e8e5dd;
+  padding-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  font-size: 0.85rem;
+  color: #4a4740;
+}
+
+.transport-item {
+  width: 100%;
+}
+
+.transport-title {
+  width: 100%;
+  margin-bottom: 10px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a2321;
+}
+
+.transport-description {
+  width: 100%;
+  line-height: 1.75;
+
+  /* 한글이 이상하게 한 글자씩 잘리는 것을 방지 */
+  word-break: keep-all;
+
+  /* 주소나 긴 문자열이 화면 밖으로 나가는 것을 방지 */
+  overflow-wrap: break-word;
+}
+
+.transport-description p {
+  margin: 0;
+}
+
+.transport-description p + p {
+  margin-top: 3px;
+}
+
+.transport-description strong {
+  color: #1a2321;
+  font-weight: 500;
+}
+
+.transport-route {
+  margin-top: 12px !important;
 }
 /* =================
    9. 마음 전하실 곳
@@ -665,49 +700,4 @@ body {
     transform: scale(1);
     opacity: 1;
   }
-}
-
-/* =================
-   대중교통 안내 정렬
-================= */
-
-.transport-row {
-  display: flex;
-  align-items: flex-start;
-}
-
-.transport-row > b {
-  display: block;
-  width: 55px;
-  min-width: 55px;
-  flex-shrink: 0;
-}
-
-.transport-row > span {
-  display: block;
-  flex: 1;
-}
-
-.subway-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.subway-info > span {
-  display: block;
-  width: 100%;
-  line-height: 1.6;
-}
-
-.bus-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.bus-info > span {
-  display: block;
-  width: 100%;
-  line-height: 1.6;
 }
