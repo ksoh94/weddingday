@@ -387,12 +387,24 @@ body {
 /* =================
    7. 갤러리
 ================= */
+/* =================
+   배열방식 수정
+
 .gallery-container {
   width: 100%;
   margin-top: 35px;
   columns: 3;
   column-gap: 8px;
 }
+================= */
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+/* =================
+   배열방식 수정
 .gallery-item {
   width: 100%;
   margin-bottom: 8px;
@@ -400,11 +412,28 @@ body {
   overflow: hidden;
   break-inside: avoid;
 }
+================= */
+.gallery-item {
+  width: 100%;
+  margin: 0;
+}
+
+/* =================
+   배열방식 수정
 .gallery-item img {
   width: 100%;
   display: block;
   transition: transform 0.3s ease;
 }
+================= */
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
 .gallery-item img:hover {
   transform: scale(1.05);
 }
