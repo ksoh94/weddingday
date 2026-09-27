@@ -939,8 +939,11 @@ body {
 .guestbook-item-header {
   display: flex;
   align-items: center;
+   /*
   justify-content: flex-start;
   gap: 12px;
+   */
+   justify-content: space-between;
   margin-bottom: 6px;
 }
 
@@ -953,22 +956,43 @@ body {
   color: #999;
 }
 
-/* 축하글 한 건씩 구분 */
+/* 축하글 한 건씩 구분 
 .guestbook-item {
   padding: 14px 0 18px;
   margin-bottom: 14px;
   border-bottom: 1px solid #e8e5dd;
 }
-
-/* 마지막 글 아래에는 구분선 제거 */
+*/
+/* 마지막 글 아래에는 구분선 제거 
 .guestbook-item:last-child {
   margin-bottom: 0;
   border-bottom: none;
+}
+*/
+/* 축하 메시지 
+.guestbook-item p {
+  margin: 0;
+  line-height: 1.7;
+  color: #4a4740;
+}
+*/
+
+/* 날짜 */
+.guestbook-item-header span {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #aaa49b;
 }
 
 /* 축하 메시지 */
 .guestbook-item p {
   margin: 0;
+
+  font-size: 0.84rem;
   line-height: 1.7;
-  color: #4a4740;
+
+  color: #625d55;
+
+  white-space: pre-wrap;
+  word-break: break-word;
 }
